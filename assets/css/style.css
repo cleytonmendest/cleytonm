@@ -2,6 +2,7 @@
 :root{
     --primary-color:rgb(59, 59, 59);
     --secondary-color: rgb(201, 224, 253);
+    --backcolor: rgb(39, 39, 39);
 }
 *{
     padding: 0;
@@ -9,7 +10,16 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+h4{
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 30px;
+}
 
+section p{
+    text-align: center;
+}
 header{
     width: 100vw;
     height: 70px;
@@ -20,14 +30,12 @@ header{
     align-items: center;
     justify-content: center;
 }
-
 .header{
     width: 1140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 .logo a{
     color: var(--primary-color);
     font-size: 20px;
@@ -35,11 +43,9 @@ header{
     font-weight: 600;
     margin: 0 20px;
 }
-
 .btn-mobile{
     display: none;
 }
-
 .list{
     display: flex;
 }
@@ -49,13 +55,11 @@ header{
     border-bottom: 2px solid rgba(87, 160, 0, 0.0);
     cursor: pointer;
 }
-
 .list a{
     padding:25px 30px;
     text-decoration: none;
     color: var(--primary-color);
 }
-
 .list a:hover{
     border-bottom:2px solid rgba(3, 58, 131, 0.5) ;
 }
@@ -72,7 +76,6 @@ main{
     background-attachment: fixed;
     display: flex;
 }
-
 .text{
     width: 1140px;
     height: 100px;
@@ -80,26 +83,24 @@ main{
     padding: 20px;
     color: var(--primary-color);
 }
-
 .text h1{
     text-shadow: 2px 2px rgba(59, 59, 59, 0.3);
     font-size: 50px;
 }
-
 .text h3{
     font-size: 35px;
     text-shadow: 2px 2px rgba(59, 59, 59, 0.3);
 }
 .about{
-    height: 500px;
-    background-color: rgb(39, 39, 39);
+    height: 600px;
+    background-color: var(--backcolor);
 }
 .about h4{
     color: rgb(199,199,199);
+}
+.about p{
     text-align: center;
-    padding-top: 30px;
-    font-weight: 400;
-    font-size: 30px;
+    color: rgb(199, 199, 199);
 }
 .about-img{
     max-width: 1140px;
@@ -109,14 +110,12 @@ main{
     align-items: center;
     justify-content: space-evenly;
 }
-
 .about-text p{
     color:rgb(199, 199, 199);
     width: 300px;
     height: 80%;
     text-align: start;
 }
-
 .img-circle{
     width: 300px;
     height: 300px;
@@ -126,17 +125,27 @@ main{
     align-items: center;
     border: 3px solid rgb(199, 199, 199);
 }
-
 .img-circle img{
     width: 300px;
 }
-
-
-.skills{
-    height: 500px;
-    background-color: rgb(194, 209, 250);
+.projects{
+    height: 600px;
+    background-color: var(--secondary-color);
 }
-
+.projects-icons{
+    width: 1140px;
+    height: 500px ;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.project-item{
+    width: 250px;
+    height: 170px;
+    margin: 15px;
+    background-color: rgba(59, 59, 59, 0.3);
+}
 @media (max-width: 730px){
     .btn-mobile{
         display: flex;
@@ -147,7 +156,6 @@ main{
         cursor: pointer;
         gap: 10px;
     }
-
     .list{
         display: block;
         width: 100%;
@@ -161,23 +169,19 @@ main{
         visibility: hidden;
         overflow-y: hidden ;
     }
-
     .list a{
         padding: 10px 30px;
     }
-
     .nav.active .list{
         visibility: visible;
         height: calc(100vh - 70px);
     }
-
     .burg{
         display: block;
         border-top:2px solid;
         width: 20px;
         color: black;
     }
-
     .burg::after, .burg::before{
         content: '';
         display: block;
@@ -188,15 +192,12 @@ main{
         transition: .4s;
         position: relative;
     }
-
     .nav.active .burg{
         border-top-color: transparent;
     }
-
     .nav.active .burg::before{
         transform: rotate(135deg);
     }
-
     .nav.active .burg::after{
         transform: rotate(-135deg);
         top:-7px;
