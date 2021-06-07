@@ -4,28 +4,46 @@
     --secondary-color: rgb(201, 224, 253);
     --backcolor: rgb(39, 39, 39);
 }
+@keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+a{
+    text-decoration: none;
+}
 h4{
     text-align: center;
     padding-top: 30px;
     font-weight: 400;
     font-size: 30px;
+    text-shadow: 2px 2px 3px rgba(59, 59, 59, 0.7);
 }
 
 section p{
     text-align: center;
+    margin: 20px;
+    font-weight: 300;
 }
 header{
     width: 100vw;
     height: 70px;
     background-color: var(--secondary-color);
     position: fixed;
-    top: 20px;
+    top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +57,6 @@ header{
 .logo a{
     color: var(--primary-color);
     font-size: 20px;
-    text-decoration: none;
     font-weight: 600;
     margin: 0 20px;
 }
@@ -57,7 +74,6 @@ header{
 }
 .list a{
     padding:25px 30px;
-    text-decoration: none;
     color: var(--primary-color);
 }
 .list a:hover{
@@ -85,30 +101,30 @@ header{
 }
 .text h1{
     text-shadow: 2px 2px rgba(59, 59, 59, 0.3);
-    font-size: 50px;
+    font-size: 4rem;
 }
 .text h3{
-    font-size: 35px;
+    font-size: 2rem;
     text-shadow: 2px 2px rgba(59, 59, 59, 0.3);
 }
 .about{
-    height: 600px;
     background-color: var(--backcolor);
 }
 .about h4{
     color: rgb(199,199,199);
 }
 .about p{
-    text-align: center;
     color: rgb(199, 199, 199);
 }
 .about-img{
+    width: 100vw;
     max-width: 1140px;
-    height: 450px;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 .about-text p{
     color:rgb(199, 199, 199);
@@ -124,18 +140,20 @@ header{
     display: flex;
     align-items: center;
     border: 3px solid rgb(199, 199, 199);
+    margin: 50px;
 }
 .img-circle img{
     width: 300px;
 }
 .projects{
-    height: 600px;
     background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .projects-icons{
     width: 100vw;
     max-width: 1140px;
-    height: 500px ;
     display: flex;
     margin: auto;
     flex-wrap: wrap;
@@ -151,18 +169,12 @@ header{
     display: flex;
     justify-content: center;
     border-radius: 10px;
+    box-shadow: 5px 5px 8px rgba(59, 59, 59, 0.5);
 }
 .project-item img{
     width: 290px;
-    height: 170px;
-    transition: 1s;
+    height: 190px;
 }
-.project-item:hover .project-info{
-    background-color: rgba(0, 0, 0, 0.9);
-    color: rgba(255, 255, 255, 0.9);
-}
-
-
 .project-info{
     display: flex;
     justify-content: center;
@@ -171,13 +183,103 @@ header{
     width: inherit;
     height: inherit;
     background-color: rgba(0, 0, 0, 0.0);
-    transition: 1s;
     border-radius: inherit;
     color: rgba(255, 255, 255, 0.0);
     flex-direction: column;
     padding: 20px;
+    visibility: hidden;
+    transition: 1s linear;
+    opacity: 0;
 }
-
+.project-info h5{
+    font-size: 19px;
+    font-weight: 600;
+    margin:10px;
+}
+.project-info p{
+    font-size: 13px;
+    margin:0;
+}
+.project-links img{
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin: 10px;
+}
+.project-item:hover .project-info{
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+}
+.project-info:focus{
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+}
+.visit{
+    margin:30px;
+}
+.btn-git{
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    box-shadow: 12px 12px 24px rgba(46, 122, 115, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    color: #313133;
+}
+.btn-git img{
+    width: 20px;
+    height: 20px;
+}
+.btn-git:hover, .btn-git:focus{
+    transform: translateY(-6px);
+}
+.contact{
+    background-color: var(--backcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-info{
+    width: 100vw;
+    max-width: 1140px;
+}
+.contact-area h4{
+    color: rgb(199, 199, 199);
+}
+.contact-area p{
+    color: rgb(199, 199, 199);
+}
+.contact-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-zap{
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    box-shadow: 12px 12px 24px rgba(46, 122, 115, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    color: #313133;
+}
+.btn-zap img{
+    width: 20px;
+    height: 20px;
+}
+.btn-zap:hover{
+    transform: translateY(-6px);
+}
 @media (max-width: 730px){
     .btn-mobile{
         display: flex;
