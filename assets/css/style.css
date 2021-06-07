@@ -192,7 +192,7 @@ header{
     height: inherit;
     background-color: rgba(0, 0, 0, 0.0);
     border-radius: inherit;
-    color: rgba(255, 255, 255, 0.0);
+    color: var(--offwhite);
     flex-direction: column;
     padding: 20px;
     visibility: hidden;
@@ -207,10 +207,11 @@ header{
 .project-info p{
     font-size: 13px;
     margin:0;
+    color: var(--offwhite);
 }
 .project-links img{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background-color: #fff;
     border-radius: 50%;
     border: 3px solid #fff;
@@ -256,16 +257,30 @@ header{
     align-items: center;
 }
 .contact-info{
-    width: 100vw;
-    max-width: 1140px;
+    width: 100%;
 }
 .contact-area h4, p{
     color: var(--darkgray);
+}
+.contact-card{
+    width: 450px;
+    background-color: var(--darkgray);
+    margin: 50px 0;
+    border-radius: 50px;
 }
 .contact-info{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction:column ;
+    padding: 20px;
+}
+.contact-info .img-circle{
+    margin-bottom: 20px;
+}
+.contact-icons img{
+    width: 30px;
+    height: 30px;
 }
 .btn-zap{
     margin: 30px;
@@ -290,6 +305,10 @@ header{
 footer{
     height: 200px;
     background-color: rgb(15, 15, 15);
+    color: var(--offwhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media (max-width: 730px){
     .btn-mobile{
