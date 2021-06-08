@@ -366,7 +366,7 @@ footer{
     justify-content: center;
     align-items: center;
 }
-@media (max-width: 730px){
+@media (max-width: 600px){
     .btn-mobile{
         display: flex;
         padding: 10px 25px;
@@ -398,6 +398,9 @@ footer{
     }
     .list a{
         padding: 20px 40px;
+    }
+    .arrow{
+        margin-bottom: 100px;
     }
     .nav.active .list{
         visibility: visible;
