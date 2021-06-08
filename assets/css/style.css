@@ -391,4 +391,10 @@ footer{
         transform: rotate(-135deg);
         top:-7px;
     }
+    .text h1{
+        font-size: 3rem;
+    }
+    .text h3{
+        font-size: 1.5rem;
+    }
 }
