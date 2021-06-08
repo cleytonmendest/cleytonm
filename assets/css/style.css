@@ -6,6 +6,29 @@
     --darkgray: rgb(50, 50, 50);
     --darkshadow: rgba(22, 22, 22, 0.7);
 }
+@keyframes float {
+    from {
+    transform: translate(2%, -5%) rotate(-1deg);
+    }
+    to {
+    transform: translate(-2%, 5%) rotate(3deg);
+    }
+}
+.word,
+.char {
+  animation-delay: calc(var(--char-index) * -0.5s);
+  animation-direction: alternate;
+  animation-duration: 2500ms;
+  animation-iteration-count: var(--it, infinite);
+  animation-name: float;
+  animation-timing-function: ease-in-out; 
+  animation-fill-mode: var(--fill, forwards);
+  display: inline-block;
+  position: relative;
+  transform-origin: 50% 100%;
+  z-index: 1;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -37,6 +60,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 99;
 }
 .header{
     width: 1140px;
@@ -67,10 +91,11 @@ header{
 .list a{
     padding:25px 30px;
     color: var(--darkgray);
-    transition: 1s linear;
+    transition: .4s linear;
 }
 .list a:hover{
-    border-bottom: 3px solid var(--offwhite);
+    background-color: var(--mediumgray);
+    color: var(--offwhite);
 }
 .sidebar{
     position: fixed;
@@ -263,7 +288,7 @@ header{
     color: var(--darkgray);
 }
 .contact-card{
-    width: 450px;
+    width: 400px;
     background-color: var(--darkgray);
     margin: 50px 0;
     border-radius: 50px;

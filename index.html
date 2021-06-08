@@ -13,12 +13,13 @@
     <meta name="theme-color" content="#ffffff">
     <title>Cleyton Mendes</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/splitting.css">
 </head>
 <body>
     <header>
         <div class="header">
             <div class="logo">
-                <a href="#">
+                <a href="#initial">
                     <img src="assets/img/logo.png" alt="logo">
                 </a>
             </div>
@@ -27,24 +28,24 @@
                     <span class="burg"></span>
                 </button>
                 <ul class="list">
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="initial">
+        <section class="initial" id="initial">
             <div class="ctm">
                 <div class="text">
-                    <h1>Olá</h1>
-                    <h3>Meu nome é Cleyton Mendes</h3>
-                    <h3>E sou Front-End Developer!</h3>
+                    <h1 class="h1" data-splitting>Olá</h1>
+                    <h3 class="h3" data-splitting>Meu nome é Cleyton Mendes</h3>
+                    <h3 class="h3" data-splitting>E sou Front-End Developer!</h3>
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <h4>#Sobre</h4>
             <p>Alguns detalhes sobre mim.</p>
             <div class="about-img">
@@ -57,7 +58,7 @@
             </div>
             <div class=""></div>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <h4>#Projetos</h4>
             <p>Meus projetos e estudos.</p>
             <div class="projects-icons">
@@ -154,7 +155,7 @@
                 <a href="https://github.com/cleytonmendest" target="_blank" rel="noopener noreferrer"><button class="btn-git"type="button">Visite meu GitHub <img src="assets/img/giticon.png" alt="GITHUB"></button></a>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact-area">
                 <h4>#Contatos</h4>
                 <p>Onde me encontrar</p>
@@ -164,10 +165,10 @@
                             <img class="img-contact" src="assets/img/eumesmo.jpeg" alt="">
                         </div>
                         <div class="contact-icons">
-                            <a href="" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.facebook.com/cleyton.teixeira.37" target="_blank" rel="noopener noreferrer">
                                 <img src="assets/img/faceicon.webp" alt="Face Icon">
                             </a>
-                            <a href="" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/cleyton-mendes-199138b5/" target="_blank" rel="noopener noreferrer">
                                 <img src="assets/img/linkeicon.png" alt="Face Icon">
                             </a>
                         </div>
@@ -181,5 +182,7 @@
         <h5>Development by Cleyton Mendes</h5>
     </footer>
 <script src="assets/js/script.js"></script>
+<script src="assets/js/splitting.js"></script>
+<script> Splitting(); </script>
 </body>
 </html>
