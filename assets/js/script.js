@@ -1,7 +1,15 @@
 // MENU MOBILE DISPLAY
 const btnMobi = document.querySelector('.btn-mobile');
+const nav = document.querySelector('.nav');
+const ul = document.querySelector('ul');
 
-btnMobi.addEventListener('click', () =>{
-    const nav = document.querySelector('.nav');
-     nav.classList.toggle('active');
-})
+const btnToggle = ()=>{
+    nav.classList.toggle('active');
+}
+
+btnMobi.addEventListener('click', btnToggle);
+ul.addEventListener('click', btnToggle);
+
+
+
+
