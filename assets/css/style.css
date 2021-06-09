@@ -213,7 +213,7 @@ header{
     flex-direction: column;
     align-items: center;
 }
-.projects h4, p{
+.projects p, h4{
     color: var(--offwhite);
 }
 .projects-icons{
@@ -337,6 +337,25 @@ header{
 .contact-icons img{
     width: 30px;
     height: 30px;
+}
+.email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email img{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+.email p{
+    color: var(--offwhite);
+    margin: 20px 0;
+}
+.gmail{
+    background-color: var(--mediumgray);
+    padding: 5px 5px;
+    border-radius: 10px;
 }
 .btn-zap{
     margin: 30px;
