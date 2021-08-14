@@ -77,7 +77,6 @@ header{
     height: 50px;
     background-color: var(--offwhite);
     position: fixed;
-    top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
